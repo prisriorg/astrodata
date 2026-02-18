@@ -132,7 +132,7 @@ function getPlanetStatus(birthChart, d1Chart) {
       rashi: getRashiByShort(planet.rashi),
       house: getHouseOfPlanet(planet.rashi, d1Chart),
       longitude: planet.longitude,
-      degreeInSign: decimalToDMS(degreeInSign).formatted,
+      degree: decimalToDMS(degreeInSign),
       nakshatra: planet.nakshatra,
       retrograde: planet.isRetrograde,
       exalted: getUchNeech(graha, planet.longitude) === "Uch",
@@ -148,3 +148,4 @@ function getPlanetStatus(birthChart, d1Chart) {
 }
 
 module.exports = { getRashi, longitudeToDegree, decimalToDMS, getPlanetStatus, grahas, rashi, getRashiByShort };
+
