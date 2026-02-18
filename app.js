@@ -62,7 +62,7 @@ app.get("/", (req, res) => {
     );
   }
 
-  data.svg = createSVG(planetStatus);
+  // data.svg = createSVG(planetStatus);
 
   data.rashis = getRashi(birthChart);
   res.json(data);
@@ -295,6 +295,7 @@ app.get("/get", (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
+
 
 
 
